@@ -1,3 +1,28 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(245, 230, 211);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
 .container-block {
   background: lightgray;
   height: calc(100% - 6rem);
@@ -32,4 +57,21 @@
   view-transition-name: --tooltip;
   position-anchor: --tooltip;
   z-index: 1;
+}
+.anchor-btn {
+  background-color: rgb(212, 182, 149);
+  color: rgb(74, 60, 40);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  height: 3rem;
+}
+.anchor-btn:hover {
+  background-color: #c4a17d;
 }
