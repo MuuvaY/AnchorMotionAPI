@@ -1,0 +1,35 @@
+.container-block {
+  background: lightgray;
+  height: calc(100% - 6rem);
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-width: 23rem;
+  min-height: 15rem;
+  place-content: center;
+}
+
+#anchor-btn {
+  --btn-size: 2rem;
+  background: royalblue;
+  color: white;
+  font-size: calc(var(--btn-size) - 0.75rem);
+  border-radius: var(--btn-size);
+  height: var(--btn-size);
+  width: var(--btn-size);
+  font-weight: 800;
+  display: grid;
+  place-content: center;
+  border: 2px solid navy;
+  anchor-name: --tooltip;
+}
+
+.tooltip {
+  background: aliceblue;
+  border: 2px solid;
+  padding: 0.5rem;
+  position: absolute;
+  view-transition-name: --tooltip;
+  position-anchor: --tooltip;
+  z-index: 1;
+}
