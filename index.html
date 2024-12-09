@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AnchorMotionAPI</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Découvrez CSS Anchor</title>
     <link rel="stylesheet" href="./src/styles.css" />
-  </head>
-  <body>
-    <h1>bonjour</h1>
-    <anchor-def format="top-center"></anchor-def>
-  </body>
-  <script src="./src/components/anchor.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Anchor - La Nouvelle Façon de Positionner</h1>
+        <p>Découvrez la puissance du positionnement avec CSS Anchor</p>
+    </header>
+
+    <div class="demo-container">
+        <div class="feature">
+            <h2>Qu'est-ce que CSS Anchor ?</h2>
+            <p>CSS Anchor est une nouvelle spécification qui permet de positionner des éléments par rapport à d'autres éléments de manière plus flexible et intuitive que les méthodes traditionnelles.</p>
+        </div>
+
+        <div class="feature">
+            <h2>Comment ça marche ?</h2>
+            <div class="code-example">
+.element-source {
+    anchor-name: --source;
+}
+
+.element-cible {
+    position: absolute;
+    position-anchor: --tooltip;
+    position-area: left top;
+}</div>
+        </div>
+
+        <div class="feature">
+          <h2>Démonstration</h2>
+            <anchor-def format="left-top"></anchor-def>
+            <anchor-btn></anchor-btn>
+          
+            <div id="buttons-container"></div>
+        </div>
+        
+        <div class="compatibility-note">
+            <h2>Note de Compatibilité</h2>
+            <p>CSS Anchor est une fonctionnalité récente et n'est pas encore supportée par tous les navigateurs.</p>
+            
+            <div class="browser-support">
+              <compatibility-section name="Chrome" version="120+"></compatibility-section>
+              <compatibility-section name="Firefox" version="En développement"></compatibility-section>
+              <compatibility-section name="Safari" version="En développement"></compatibility-section>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./src/components/compatibility-section.js"></script>
+<script src="./src/components/anchor.js"></script>
+<script src="./src/components/anchor-btn.js"></script>
+
 </html>
