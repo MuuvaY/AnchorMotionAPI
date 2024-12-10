@@ -50,14 +50,35 @@ h1 {
 }
 
 .tooltip {
+  container-type: inline-size;
+  text-align:center;
   background: aliceblue;
   border: 2px solid;
+  min-width: 8rem;
+  min-height: 70px;
+  margin: 40px 60px;
   padding: 0.5rem;
   position: absolute;
-  view-transition-name: --tooltip;
   position-anchor: --tooltip;
   z-index: 1;
 }
+.ouvert{
+  width:9rem;
+
+}
+.ferme{
+  width:7rem;
+  min-width: auto;
+}
+.tooltip p {
+  display: none;
+
+  @container (min-width: 6rem) {
+      display: block;
+  }
+}
+
+
 .anchor-btn {
   background-color: rgb(212, 182, 149);
   color: rgb(74, 60, 40);

@@ -5,17 +5,18 @@ class AnchorBtn extends HTMLElement {
 
   render() {
     const formats = [
-      "left-top",
+      "left top",
       "left",
-      "left-bottom",
-      "bottom-center",
-      "right-top",
-      "right",
-      "right-bottom",
-      "top-center",
+      "left bottom",
+      "bottom center",
+      "right top",
+      "right", 
+      "right bottom",
+      "top center",
     ];
 
     const buttonContainer = document.createElement("div");
+    const anchorblocks = document.querySelectorAll(".tooltip");
     buttonContainer.id = "buttons-container";
 
     formats.forEach((format) => {
@@ -23,8 +24,17 @@ class AnchorBtn extends HTMLElement {
       button.textContent = `Position: ${format}`;
       button.className = "anchor-btn";
       button.addEventListener("click", () => {
-        const anchor = document.querySelector("anchor-def");
-        anchor.setAttribute("format", format);
+        anchorblocks.forEach((block) => {
+          // 1. Vérifiez l'attribut data-position au lieu de style.positionArea
+          if (block.getAttribute('data-position') === format) {
+            block.classList.add("ouvert");
+            block.classList.remove("ferme");
+          } else {
+            // 2. Corrigez la faute de frappe "sclae" en "scale"
+            block.classList.add("ferme");
+            block.classList.remove("ouvert");
+          }
+        });
       });
       buttonContainer.appendChild(button);
     });
@@ -34,4 +44,3 @@ class AnchorBtn extends HTMLElement {
 }
 
 customElements.define("anchor-btn", AnchorBtn);
-
