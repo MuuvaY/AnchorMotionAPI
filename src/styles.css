@@ -75,95 +75,164 @@ h1 {
 .anchor-btn:hover {
   background-color: #c4a17d;
 }
-<<<<<<< HEAD
-=======
-  /* Reset de base */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
-
 .demo-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
-    background-color: #f8fafc;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 .feature {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .feature h2 {
-    color: #1e40af;
-    margin-bottom: 1rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
 }
 
 .code-example {
-    background-color: #1e293b;
-    color: #e2e8f0;
-    padding: 1rem;
-    border-radius: 6px;
-    margin: 1rem 0;
-    font-family: monospace;
-    white-space: pre;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  font-family: monospace;
+  white-space: pre;
 }
 
 .anchor-source {
-    anchor-name: --source;
-    width: 100px;
-    height: 100px;
-    background-color: #3b82f6;
-    position: relative;
-    border-radius: 8px;
+  anchor-name: --source;
+  width: 100px;
+  height: 100px;
+  background-color: #3b82f6;
+  position: relative;
+  border-radius: 8px;
 }
 
 .anchor-popup {
-    position: absolute;
-    background-color: #ef4444;
-    color: white;
-    padding: 1rem;
-    border-radius: 6px;
-    width: 200px;
-    text-align: center;
-    
-    position: absolute;
-    left: anchor(--source right);
-    top: anchor(--source top);
+  position: absolute;
+  background-color: #ef4444;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 200px;
+  text-align: center;
+
+  position: absolute;
+  left: anchor(--source right);
+  top: anchor(--source top);
 }
 
 .compatibility-note {
-    background-color: #fef3c7;
-    padding: 1rem;
-    border-radius: 6px;
-    margin-top: 2rem;
+  background-color: #fef3c7;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 2rem;
 }
 
 .support-info {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .browser-support {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .browser {
-    text-align: center;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid #e2e8f0;
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
 }
->>>>>>> main
+
+.container__presentation {
+  margin-bottom: 2rem;
+}
+.container__stitle {
+  margin-bottom: 1rem;
+}
+
+.container__comprendre {
+  margin-bottom: 2rem;
+}
+
+.container__p {
+  margin-bottom: 1rem;
+}
+.presentation__puce {
+  margin-left: 4rem;
+}
+.container__code {
+  font-size: 1rem;
+  background-color: lightgrey;
+  border-radius: 0.25rem;
+  padding: 0 0.3rem;
+}
+
+.techniques__stitle {
+  margin-bottom: 1rem;
+}
+
+.techniques__p {
+  margin-bottom: 1rem;
+}
+
+.techniques__number {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.avantages__stitle {
+  margin-bottom: 1rem;
+}
+
+.avantages__p {
+  margin-bottom: 1rem;
+}
+.avantages__puces {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+.exemples__stitle {
+  margin-bottom: 1rem;
+}
+.container__exemple {
+  display: block;
+  background-color: #1b1b1b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+.class {
+  color: green;
+}
+.code__propriete {
+  color: lightcoral;
+  margin-left: 2rem;
+}
+.container__exemple {
+  color: grey;
+}
+.code__value {
+  color: blue;
+}
