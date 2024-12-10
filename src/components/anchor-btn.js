@@ -34,8 +34,3 @@ class AnchorBtn extends HTMLElement {
 }
 
 customElements.define("anchor-btn", AnchorBtn);
-
-document.addEventListener("DOMContentLoaded", () => {
-  const anchorBtn = document.createElement("anchor-btn");
-  document.body.appendChild(anchorBtn);
-});
