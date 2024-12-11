@@ -1,4 +1,7 @@
 class AnchorBtn extends HTMLElement {
+  static get observedAttributes() {
+    return ["position"]; 
+}
   connectedCallback() {
     this.render();
   }
@@ -17,6 +20,7 @@ class AnchorBtn extends HTMLElement {
 
     const buttonContainer = document.createElement("div");
     const anchorblocks = document.querySelectorAll(".tooltip");
+    const anchorcode = document.querySelector("anchor-code");
     buttonContainer.id = "buttons-container";
 
     formats.forEach((format) => {
@@ -27,6 +31,7 @@ class AnchorBtn extends HTMLElement {
         anchorblocks.forEach((block) => {
           // 1. Vérifiez l'attribut data-position au lieu de style.positionArea
           if (block.getAttribute('data-position') === format) {
+            anchorcode.setAttribute("position", format);
             block.classList.add("ouvert");
             block.classList.remove("ferme");
           } else {
