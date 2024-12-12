@@ -167,3 +167,76 @@ header {
     }
   }
 }
+
+.container__presentation {
+  margin-bottom: 2rem;
+}
+.container__stitle {
+  margin-bottom: 1rem;
+}
+
+.container__comprendre {
+  margin-bottom: 2rem;
+}
+
+.container__p {
+  margin-bottom: 1rem;
+}
+.presentation__puce {
+  margin-left: 4rem;
+}
+.container__code {
+  font-size: 1rem;
+  background-color: lightgrey;
+  border-radius: 0.25rem;
+  padding: 0 0.3rem;
+}
+
+.techniques__stitle {
+  margin-bottom: 1rem;
+}
+
+.techniques__p {
+  margin-bottom: 1rem;
+}
+
+.techniques__number {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.avantages__stitle {
+  margin-bottom: 1rem;
+}
+
+.avantages__p {
+  margin-bottom: 1rem;
+}
+.avantages__puces {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+.exemples__stitle {
+  margin-bottom: 1rem;
+}
+.container__exemple {
+  display: block;
+  background-color: #1b1b1b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+.class {
+  color: green;
+}
+.code__propriete {
+  color: lightcoral;
+  margin-left: 2rem;
+}
+.container__exemple {
+  color: grey;
+}
+.code__value {
+  color: blue;
+}
