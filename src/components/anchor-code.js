@@ -16,7 +16,7 @@ class AnchorCode extends HTMLElement {
     const position = this.getAttribute("position") || "left top";
     this.innerHTML = `<div class="code-example">
 .element-source {
-    anchor-name: --source;
+    anchor-name: --tooltip;
 }
 
 .element-cible {
