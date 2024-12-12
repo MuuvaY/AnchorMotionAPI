@@ -1,7 +1,7 @@
 class AnchorBtn extends HTMLElement {
   static get observedAttributes() {
-    return ["position"]; 
-}
+    return ["position"];
+  }
   connectedCallback() {
     this.render();
   }
@@ -13,7 +13,7 @@ class AnchorBtn extends HTMLElement {
       "left bottom",
       "bottom center",
       "right top",
-      "right", 
+      "right",
       "right bottom",
       "top center",
     ];
@@ -30,7 +30,7 @@ class AnchorBtn extends HTMLElement {
       button.addEventListener("click", () => {
         anchorblocks.forEach((block) => {
           // 1. Vérifiez l'attribut data-position au lieu de style.positionArea
-          if (block.getAttribute('data-position') === format) {
+          if (block.getAttribute("data-position") === format) {
             anchorcode.setAttribute("position", format);
             block.classList.add("ouvert");
             block.classList.remove("ferme");
