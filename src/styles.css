@@ -104,6 +104,7 @@ header {
   gap: 10px;
   max-width: 800px;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
 
   .anchor-btn {
@@ -125,28 +126,28 @@ header {
   }
 }
 
-/* .anchor-source {
-    anchor-name: --source;
-    width: 100px;
-    height: 100px;
-    background-color: #3b82f6;
-    position: relative;
-    border-radius: 8px;
+.container-blockdemo1{
+  background: lightgray;
+  height: calc(100% - 4rem);
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-width: 23rem;
+  min-height: 10rem;
+  place-content: center;
+  #element-source {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+  }
+  .element-cible {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
 }
 
-.anchor-popup {
-    position: absolute;
-    background-color: #ef4444;
-    color: white;
-    padding: 1rem;
-    border-radius: 6px;
-    width: 200px;
-    text-align: center;
-    
-    position: absolute;
-    left: anchor(--source right);
-    top: anchor(--source top);
-} */
 
 .compatibility-note {
   background-color: #fef3c7;
