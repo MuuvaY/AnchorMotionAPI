@@ -34,33 +34,164 @@
             des interfaces modernes et interactives.
           </p>
         </div>
+        <div class="container__comprendre">
+          <h2 class="container__stitle">Comprendre les Ancres CSS</h2>
+          <p class="container__p">
+            Les ancres CSS, introduites avec des spécifications récentes,
+            permettent à un élément de se positionner ou de se redimensionner en
+            fonction d'un autre. Contrairement aux méthodes traditionnelles
+            (comme les marges ou les flexbox), les ancres se basent sur des
+            relations explicites entre des éléments, établies via des propriétés
+            CSS dédiées.
+          </p>
+          <p class="container__p">
+            Cette fonctionnalité est particulièrement utile pour des scénarios
+            où les tailles ou les positions des éléments changent dynamiquement,
+            par exemple :
+          </p>
+          <ul class="presentation__puce">
+            <li>Les interfaces utilisateur interactives.</li>
+            <li>
+              Les applications web complexes où les relations entre les
+              composants sont essentielles.
+            </li>
+            <li>
+              Les animations coordonnées où un élément suit ou dépend d’un
+              autre.
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <div class="feature">
-            <h2>Comment ça marche ?</h2>
-            <anchor-code position=""></anchor-code>
-        </div>
+      <div class="techniques">
+        <h2 class="techniques__stitle">Les Bases Techniques des Ancres CSS</h2>
+        <p class="techniques__p">
+          Pour tirer parti des ancres CSS, il est important de comprendre les
+          propriétés clés associées. Voici un aperçu détaillé :
+        </p>
+        <p class="techniques__p">
+          <span class="techniques__number">1. </span
+          ><code class="container__code">anchor-name</code> : Définir une ancre
+          Cette propriété attribue un nom à un élément, le transformant en un
+          point de référence utilisable par d'autres éléments.
+        </p>
 
-        <div class="feature">
-          <h2>Démonstration</h2>
-            <anchor-def></anchor-def>
-            <anchor-btn></anchor-btn>
+        <code class="container__exemple">
+          <span class="class">.reference </span>{<br />
+          <span class="code__propriete">anchor-name</span>:
+          <span class="code__value">my-anchor</span>; <br />}
+        </code>
+
+        <p class="techniques__p">
+          Ici, <code class="container__code">.reference</code> est désormais une
+          ancre nommée my-anchor.
+        </p>
+
+        <p class="techniques__p">
+          <span class="techniques__number">2. </span
+          ><code class="container__code">anchor-offset</code> : Ajuster la
+          position de l'ancre Permet de spécifier un décalage pour l’ancre par
+          rapport à son élément. Cela peut être utile pour affiner la position
+          de l’ancre sans affecter l'élément lui-même.
+        </p>
+
+        <code class="container__exemple">
+          <span class="class">.reference </span>{ <br />
+          <span class="code__propriete">anchor-name</span>:
+          <span class="code__value">my-anchor</span>;<br />
+          <span class="code__propriete"> anchor-offset: </span>
+          <span class="code__value">10px 20px;</span>;
+          <br />
+          }
+        </code>
+        <p class="techniques__p">
+          Cet exemple place l'ancre 10px à droite et 20px en bas de l'élément
+          <code class="container__code">.reference</code>.
+        </p>
+
+        <p class="techniques__p">
+          <span class="techniques__number">3. </span
+          ><code class="container__code">postion</code> : Positionnement basé
+          sur une ancre En utilisant la propriété
+          <code class="container__code">postion</code>
+          avec une ancre, un élément peut être aligné par rapport à un autre.
+        </p>
+
+        <code class="container__exemple">
+          <span class="class">.target </span>{ <br />
+          <span class="code__propriete">position</span>:
+          <span class="code__value">anchor(my-anchor) left 20px top 10px;</span
+          >;<br />
+          }
+        </code>
+        <p class="techniques__p">
+          Dans cet exemple, <code class="container__code">.target</code> est
+          positionné à 20 pixels à gauche et 10 pixels au-dessus de l’ancre
+          <code class="container__code">.my-anchor</code>.
+        </p>
+      </div>
+      <div class="avantages">
+        <h2 class="avantages__stitle">Avantages des Ancres CSS</h2>
+        <p class="avantages__p">
+          L'intégration des ancres CSS dans vos projets présente plusieurs
+          bénéfices notables :
+        </p>
+        <ul class="avantages__puces">
+          <li>
+            Simplicité et clarté En reliant directement deux éléments, les
+            ancres simplifient le code en réduisant la nécessité de calculs
+            complexes ou d'approches détournées pour gérer des relations.
+          </li>
+          <li>
+            Dynamisme et flexibilité Les ancres permettent des mises en page
+            plus adaptatives. Par exemple, si la taille ou la position de
+            l’élément de référence change, les éléments liés via des ancres
+            s’ajustent automatiquement.
+          </li>
+          <li>
+            Interactivité accrue Les interactions utilisateur peuvent être
+            gérées de manière plus intuitive. Par exemple, des ancres peuvent
+            être utilisées pour repositionner ou redimensionner dynamiquement
+            des éléments en réponse à des événements comme un clic ou un survol.
+          </li>
+        </ul>
+      </div>
+      <div class="exemples">
+        <h2 class="exemples__stitle">Exemples Pratiques d'Utilisation</h2>
+      </div>
+
+      <div class="feature">
+        <h2>Démonstration</h2>
+        <anchor-def></anchor-def>
+        <anchor-btn></anchor-btn>
+      </div>
+
+      <div class="compatibility-note">
+        <h2>Note de Compatibilité</h2>
+        <p>
+          CSS Anchor est une fonctionnalité récente et n'est pas encore
+          supportée par tous les navigateurs.
+        </p>
+
+        <div class="browser-support">
+          <compatibility-section
+            name="Chrome"
+            version="120+"
+          ></compatibility-section>
+          <compatibility-section
+            name="Firefox"
+            version="En développement"
+          ></compatibility-section>
+          <compatibility-section
+            name="Safari"
+            version="En développement"
+          ></compatibility-section>
         </div>
-        
-        <div class="compatibility-note">
-            <h2>Note de Compatibilité</h2>
-            <p>CSS Anchor est une fonctionnalité récente et n'est pas encore supportée par tous les navigateurs.</p>
-            
-            <div class="browser-support">
-              <compatibility-section name="Chrome" version="120+"></compatibility-section>
-              <compatibility-section name="Firefox" version="En développement"></compatibility-section>
-              <compatibility-section name="Safari" version="En développement"></compatibility-section>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
-<script src="./src/components/compatibility-section.js"></script>
-<script src="./src/components/anchor-code.js"></script>
-<script src="./src/components/anchor.js"></script>
-<script src="./src/components/anchor-btn.js"></script>
-
+  </body>
+  <script src="./src/components/compatibility-section.js"></script>
+  <script src="./src/components/anchor-code.js"></script>
+  <script src="./src/components/anchor.js"></script>
+  <script src="./src/components/anchor-btn.js"></script>
 </html>
