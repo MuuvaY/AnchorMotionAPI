@@ -26,6 +26,7 @@ class Anchor extends HTMLElement {
           </div>
         `;
       }).join("")}
+      </div>
       `;
   }
 
