@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <title>Découvrez CSS Anchor</title>
     <link rel="stylesheet" href="./src/styles.css" />
-    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
   </head>
   <body>
     <header>
@@ -71,64 +79,65 @@
         </p>
         <p class="techniques__p">
           <span class="techniques__number">1. </span
-          ><code class="container__code">anchor-name</code> : Définir une ancre
-          Cette propriété attribue un nom à un élément, le transformant en un
-          point de référence utilisable par d'autres éléments.
+          ><code class="container__code">anchor-name</code> : Cette propriété
+          attribue un nom à un élément, le transformant en un point de référence
+          utilisable par d'autres éléments.
         </p>
 
-        <code class="container__exemple">
+        <!-- <code class="container__exemple">
           <span class="class">.reference </span>{<br />
           <span class="code__propriete">anchor-name</span>:
           <span class="code__value">my-anchor</span>; <br />}
-        </code>
-
+        </code> -->
+        <show-code language="css1"></show-code>
         <p class="techniques__p">
-          Ici, <code class="container__code">.reference</code> est désormais une
-          ancre nommée my-anchor.
+          Ici, <code class="container__code">.element-source</code> est
+          désormais une ancre nommée tooltip.
         </p>
 
         <p class="techniques__p">
-          <span class="techniques__number">2. </span
-          ><code class="container__code">anchor-offset</code> : Ajuster la
-          position de l'ancre Permet de spécifier un décalage pour l’ancre par
-          rapport à son élément. Cela peut être utile pour affiner la position
-          de l’ancre sans affecter l'élément lui-même.
+          <span class="techniques__number">2. </span>Positionner un élément
+          cible avec position-anchor :
+        </p>
+        <p>
+          L’attribut <code class="container__code">position-anchor</code> permet
+          de positionner un élément en fonction d’une ancre déclarée.
+        </p>
+        <show-code language="css2"></show-code>
+        <ul class="techniques__puces">
+          <li>
+            Syntaxe : La valeur de position-anchor est le nom de l'ancre définie
+            avec anchor-name.
+          </li>
+          <li>
+            Position absolue ou fixe : L’élément cible doit généralement être
+            positionné avec des propriétés comme position: absolute ou position:
+            fixed pour que l'ancrage prenne effet.
+          </li>
+        </ul>
+
+        <p class="techniques__p">
+          <span class="techniques__number">3. </span> Contrôler la Zone de
+          Position avec <code class="container__code">position-area</code>
+        </p>
+        <p>
+          L'attribut <code class="container__code">position-area</code> précise
+          où le contenu cible sera positionné par rapport à l'ancre source.
         </p>
 
-        <code class="container__exemple">
-          <span class="class">.reference </span>{ <br />
-          <span class="code__propriete">anchor-name</span>:
-          <span class="code__value">my-anchor</span>;<br />
-          <span class="code__propriete"> anchor-offset: </span>
-          <span class="code__value">10px 20px;</span>;
-          <br />
-          }
-        </code>
-        <p class="techniques__p">
-          Cet exemple place l'ancre 10px à droite et 20px en bas de l'élément
-          <code class="container__code">.reference</code>.
-        </p>
+        <show-code language="css3"></show-code>
 
-        <p class="techniques__p">
-          <span class="techniques__number">3. </span
-          ><code class="container__code">postion</code> : Positionnement basé
-          sur une ancre En utilisant la propriété
-          <code class="container__code">postion</code>
-          avec une ancre, un élément peut être aligné par rapport à un autre.
-        </p>
-
-        <code class="container__exemple">
-          <span class="class">.target </span>{ <br />
-          <span class="code__propriete">position</span>:
-          <span class="code__value">anchor(my-anchor) left 20px top 10px;</span
-          >;<br />
-          }
-        </code>
-        <p class="techniques__p">
-          Dans cet exemple, <code class="container__code">.target</code> est
-          positionné à 20 pixels à gauche et 10 pixels au-dessus de l’ancre
-          <code class="container__code">.my-anchor</code>.
-        </p>
+        <ul class="techniques__puces">
+          <li>
+            Position absolue : Les valeurs possibles de
+            <code class="container__code">position-area</code>
+            correspondent à des emplacements relatifs
+          </li>
+          <li>
+            Zone dynamique : Cela permet un positionnement fluide sans avoir à
+            calculer manuellement des marges ou des décalages.
+          </li>
+        </ul>
       </div>
       <div class="avantages">
         <h2 class="avantages__stitle">Avantages des Ancres CSS</h2>
@@ -161,7 +170,6 @@
       </div>
 
       <div class="feature">
-        <h2>Démonstration</h2>
         <anchor-def></anchor-def>
         <anchor-btn></anchor-btn>
       </div>
@@ -194,4 +202,11 @@
   <script src="./src/components/anchor-code.js"></script>
   <script src="./src/components/anchor.js"></script>
   <script src="./src/components/anchor-btn.js"></script>
+  <script src="./src//components/show-code.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      hljs.highlightAll();
+    });
+  </script>
 </html>
