@@ -21,7 +21,7 @@ class AnchorBtn extends HTMLElement {
     const buttonContainer = document.createElement("div");
     const anchorblocks = document.querySelectorAll(".tooltip");
     const anchorcode = document.querySelector("anchor-code");
-    buttonContainer.id = "buttons-container";
+    buttonContainer.id = "buttons-container1";
 
     formats.forEach((format) => {
       const button = document.createElement("button");

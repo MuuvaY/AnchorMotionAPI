@@ -10,18 +10,24 @@ class ShowCode extends HTMLElement {
   getCodeSnippet(language) {
     const codeSnippets = {
       css1: `
-        .element-source {
-            anchor-name: --tooltip;
-        }`,
+.element-source {
+
+  anchor-name: --tooltip;
+  
+}`,
       css2: `
-        .element-cible {
-            position: absolute;
-            position-anchor: --tooltip;
-        }`,
+.element-cible {
+
+  position: absolute;
+  position-anchor: --tooltip;
+
+}`,
       css3: `
-        .element-cible {
-            position-area: left top;
-        }`,
+.element-cible {
+
+  position-area: left top;
+
+}`,
     };
 
     return (
