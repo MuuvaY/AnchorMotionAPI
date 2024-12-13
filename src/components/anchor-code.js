@@ -14,17 +14,18 @@ class AnchorCode extends HTMLElement {
 
   render() {
     const position = this.getAttribute("position") || "left top";
-    this.innerHTML = `<div class="code-example">
-.element-source {
-    anchor-name: --tooltip;
-}
+    this.innerHTML = /* HTML */ `<pre><code class="language-css hljs">
+          .element-source {
+              anchor-name: --tooltip;
+          }
 
-.element-cible {
-    position: absolute;
-    position-anchor: --tooltip;
-    position-area: ${position};
-}
-    </div>`;
+          .element-cible {
+              position: absolute;
+              position-anchor: --tooltip;
+              position-area: ${position};
+          }
+
+    </pre></code>`;
   }
 }
 
