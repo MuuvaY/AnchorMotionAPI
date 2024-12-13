@@ -3,16 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Découvrez CSS Anchor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
     />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-    <!-- and it's easy to individually load additional languages -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
   </head>
   <body>
     <header>
@@ -50,12 +46,9 @@
             fonction d'un autre. Contrairement aux méthodes traditionnelles
             (comme les marges ou les flexbox), les ancres se basent sur des
             relations explicites entre des éléments, établies via des propriétés
-            CSS dédiées.
-          </p>
-          <p class="container__p">
-            Cette fonctionnalité est particulièrement utile pour des scénarios
-            où les tailles ou les positions des éléments changent dynamiquement,
-            par exemple :
+            CSS dédiées. Cette fonctionnalité est particulièrement utile pour
+            des scénarios où les tailles ou les positions des éléments changent
+            dynamiquement, par exemple :
           </p>
           <ul class="presentation__puce">
             <li>Les interfaces utilisateur interactives.</li>
@@ -77,8 +70,12 @@
           Pour tirer parti des ancres CSS, il est important de comprendre les
           propriétés clés associées. Voici un aperçu détaillé :
         </p>
-        <p class="techniques__p">
+        <p class="techniques__titre">
           <span class="techniques__number">1. </span
+          ><span class="indicateur">anchor-name :</span> Cette propriété attribue un nom à un
+          élément, le transformant en un point de référence utilisable par
+          d'autres éléments.
+        </p>
           ><code class="container__code">anchor-name</code> : Cette propriété
           attribue un nom à un élément, le transformant en un point de référence
           utilisable par d'autres éléments.
@@ -86,52 +83,57 @@
 
         <show-code language="css1"></show-code>
         <p class="techniques__p">
-          Ici, <code class="container__code">.element-source</code> est
-          désormais une ancre nommée tooltip.
+          Ici, <span>.element-source</span> est désormais une ancre nommée
+          tooltip.
         </p>
 
-        <p class="techniques__p">
+        <p class="techniques__titre">
           <span class="techniques__number">2. </span>Positionner un élément
-          cible avec position-anchor :
+          cible avec <span class="indicateur">position-anchor</span> :
         </p>
         <p>
-          L’attribut <code class="container__code">position-anchor</code> permet
-          de positionner un élément en fonction d’une ancre déclarée.
+          L’attribut <span>position-anchor</span> permet de positionner un
+          élément en fonction d’une ancre déclarée.
         </p>
         <show-code language="css2"></show-code>
         <ul class="techniques__puces">
           <li>
-            Syntaxe : La valeur de position-anchor est le nom de l'ancre définie
-            avec anchor-name.
+            <span>Syntaxe :</span> La valeur de position-anchor est le nom de
+            l'ancre définie avec anchor-name.
           </li>
           <li>
-            Position absolue ou fixe : L’élément cible doit généralement être
-            positionné avec des propriétés comme position: absolute ou position:
-            fixed pour que l'ancrage prenne effet.
+            <span>Position absolue ou fixe :</span> L’élément cible doit
+            généralement être positionné avec des propriétés comme position:
+            absolute ou position: fixed pour que l'ancrage prenne effet.
           </li>
         </ul>
 
-        <p class="techniques__p">
+        <p class="techniques__titre">
           <span class="techniques__number">3. </span> Contrôler la Zone de
-          Position avec <code class="container__code">position-area</code>
+          Position avec <span class="indicateur">position-area</span>
         </p>
-        <p>
-          L'attribut <code class="container__code">position-area</code> précise
-          où le contenu cible sera positionné par rapport à l'ancre source.
+        <p class="techniques__p">
+          L'attribut <span>position-area</span> précise où le contenu cible sera
+          positionné par rapport à l'ancre source.
         </p>
         <show-code language="css3"></show-code>
 
         <ul class="techniques__puces">
           <li>
-            Position absolue : Les valeurs possibles de
-            <code class="container__code">position-area</code>
-            correspondent à des emplacements relatifs
+            <span>Position absolue :</span> Les valeurs possibles de
+            position-area correspondent à des emplacements relatifs
           </li>
           <li>
-            Zone dynamique : Cela permet un positionnement fluide sans avoir à
-            calculer manuellement des marges ou des décalages.
+            <span>Zone dynamique :</span> Cela permet un positionnement fluide
+            sans avoir à calculer manuellement des marges ou des décalages.
           </li>
         </ul>
+
+        <p class="techniques__titre">
+          <span class="techniques__number">4. </span>Autre possibilité:
+          Positionnement basé avec les indicateurs <span class="indicateur">top</span>,<span class="indicateur">left</span>,<span class="indicateur">bottom</span> et <span class="indicateur">right</span>
+          <anchor-exemple></anchor-exemple>
+        </p>
 
         <p class="techniques__p">
           <span class="techniques__number">4. </span
@@ -143,10 +145,12 @@
         <p class="techniques__p">
           Dans cette exemple, nous utilisons simplement top et left cependant
           vous pouvez aussi utiliser bottom et right pour placer vos éléments.
+          Dans cette exemple, nous utilisons simplement top et left cependant
+          vous pouvez aussi utiliser bottom et right pour placer vos éléments.
         </p>
       </div>
       <div class="avantages">
-        <h2 class="avantages__stitle">Avantages des Ancres CSS</h2>
+        <h2>Avantages des Ancres CSS</h2>
         <p class="avantages__p">
           L'intégration des ancres CSS dans vos projets présente plusieurs
           bénéfices notables :
@@ -171,11 +175,10 @@
           </li>
         </ul>
       </div>
-      <div class="exemples">
-        <h2 class="exemples__stitle">Exemples Pratiques d'Utilisation</h2>
-      </div>
 
       <div class="feature">
+        <h2>Exemples Pratiques d'Utilisation</h2>
+        <anchor-code language="css1"></anchor-code>
         <anchor-code></anchor-code>
         <anchor-def></anchor-def>
         <anchor-btn></anchor-btn>

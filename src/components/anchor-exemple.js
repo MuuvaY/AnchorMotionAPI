@@ -9,6 +9,25 @@ class AnchorExemple extends HTMLElement {
     this.blockdemo = null;
     this.buttonContainer = null;
   }
+  getCodeSnippet(language) {
+    const top = this.getAttribute("top") || "top";
+    const left = this.getAttribute("left") || "start";
+    const codeSnippets = {
+      css1: `
+.element-source {
+    anchor-name: --tooltip;
+}
+.element-cible {
+    position: absolute;
+    top: anchor(--tooltip ${top});
+    left: anchor(--tooltip ${left});
+}`,
+    };
+    return (
+      codeSnippets[language] ||
+      "Aucun snippet de code trouvé pour cette langue."
+    );
+  }
 
   connectedCallback() {
     this.renderButtons();
@@ -23,34 +42,28 @@ class AnchorExemple extends HTMLElement {
   }
 
   updateCodeAndDemo() {
+    const language = "css1";
     const top = this.getAttribute("top") || "top";
     const left = this.getAttribute("left") || "start";
+    const codeContent = this.getCodeSnippet(language);
 
+    // Mise à jour du bloc de code
     if (this.blockcode) {
-      this.blockcode.querySelector("code").textContent = `
-        .element-source {
-            anchor-name: --tooltip;
-        }
-        .element-cible {
-            position: absolute;
-            top: anchor(--tooltip ${top});
-            left: anchor(--tooltip ${left});
-        }
-            `;
+      this.blockcode.innerHTML = `<pre><code class="language-css">${codeContent}</code></pre>`;
+    }
+    if (window.hljs) {
+      window.hljs.highlightElement(this.querySelector("code"));
     }
 
+    // Mise à jour du bloc de démonstration
     if (this.blockdemo) {
-      this.blockdemo.innerHTML = /* HTML */ ` <div class="container-blockdemo1">
-        <button id="element-source" style="anchor-name: --tooltip;">
-          Ancre
-        </button>
-        <div
-          class="element-cible"
-          style="position: absolute; top: anchor(--tooltip ${top}); left: anchor(--tooltip ${left});"
-        >
-          <p>Element positionné</p>
-        </div>
-      </div>`;
+      this.blockdemo.innerHTML = `
+            <div class="container-blockdemo1">
+                <button id="element-source" style="anchor-name: --tooltip;">Ancre</button>
+                <div class="element-cible" style="position: absolute; top: anchor(--tooltip ${top}); left: anchor(--tooltip ${left});">  
+                    <p>Element positionné</p>
+                </div>
+            </div>`;
     }
   }
 
@@ -67,7 +80,7 @@ class AnchorExemple extends HTMLElement {
     ];
 
     this.buttonContainer = document.createElement("div");
-    this.buttonContainer.id = "buttons-container";
+    this.buttonContainer.id = "buttons-container2";
     this.appendChild(this.buttonContainer);
 
     formats.forEach((format) => {
@@ -84,14 +97,9 @@ class AnchorExemple extends HTMLElement {
   }
 
   renderCodeBlock() {
-    const preElement = document.createElement("pre");
-    const codeElement = document.createElement("code");
-    preElement.className = "code-example";
-    codeElement.className = "language-css";
-    preElement.appendChild(codeElement);
-    this.blockcode = preElement;
-
-    this.appendChild(preElement);
+    this.blockcode = document.createElement("div");
+    this.blockcode.className = "code-example";
+    this.appendChild(this.blockcode);
     this.updateCodeAndDemo();
   }
 

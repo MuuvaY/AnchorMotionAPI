@@ -1,6 +1,28 @@
 class AnchorCode extends HTMLElement {
+  constructor() {
+    super();
+  }
   static get observedAttributes() {
-    return ["position"];
+    return ["position", "language"];
+  }
+  getCodeSnippet(language) {
+    const position = this.getAttribute("position") || "left top";
+    const codeSnippets = {
+      css1: `
+.element-source {
+  anchor-name: --tooltip;
+}
+
+.element-cible {
+    position: absolute;
+    position-anchor: --tooltip;
+    position-area: ${position};
+}`,
+    };
+    return (
+      codeSnippets[language] ||
+      "Aucun snippet de code trouvé pour cette langue."
+    );
   }
 
   connectedCallback() {
@@ -13,19 +35,17 @@ class AnchorCode extends HTMLElement {
   }
 
   render() {
-    const position = this.getAttribute("position") || "left top";
-    this.innerHTML = /* HTML */ `<pre><code class="language-css hljs">
-          .element-source {
-              anchor-name: --tooltip;
-          }
+    const language = this.getAttribute("language");
+    const codeContent = this.getCodeSnippet(language);
 
-          .element-cible {
-              position: absolute;
-              position-anchor: --tooltip;
-              position-area: ${position};
-          }
+    this.innerHTML = `
+       
+        <pre><code class="language-css">${codeContent}</code></pre>
+      `;
 
-    </pre></code>`;
+    if (window.hljs) {
+      window.hljs.highlightElement(this.querySelector("code"));
+    }
   }
 }
 
