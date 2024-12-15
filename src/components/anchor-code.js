@@ -18,12 +18,12 @@ class AnchorCode extends HTMLElement {
     position-anchor: --tooltip;
     position-area: ${position};
 }`,
-    };
+    }
     return (
       codeSnippets[language] ||
       "Aucun snippet de code trouvé pour cette langue."
     );
-  }
+  };
 
   connectedCallback() {
     this.render();
@@ -35,7 +35,7 @@ class AnchorCode extends HTMLElement {
   }
 
   render() {
-    const language = this.getAttribute("language");
+    const language = "css1";
     const codeContent = this.getCodeSnippet(language);
 
     this.innerHTML = `
