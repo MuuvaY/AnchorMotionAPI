@@ -270,37 +270,47 @@ p {
   }
 }
 @media screen and (max-width: 620px) {
+  .code-demo{
+    overflow: scroll ;
+    width:100%;
+  }
+  anchor-def{
+    overflow: scroll ;
+    width:100%;
+    display:inline-block;
+  }
   .container-block {
     height: calc(100% - 2rem);
-
+  
     & #anchor-btn {
       --btn-size: 1.5rem;
     }
-
+  
     & .tooltip {
       border: 2px solid;
       min-width: 5rem;
       min-height: 50px;
       margin: 30px 50px;
-
+  
       & p {
         display: none;
-
+  
         @container (min-width: 3rem) {
           display: block;
         }
       }
-
+  
       &.ouvert {
         width: 6rem;
       }
-
+  
       &.ferme {
         width: 4rem;
         min-width: auto;
       }
     }
   }
+
 }
 
 /* Conteneur des boutons */
