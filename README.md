@@ -32,13 +32,13 @@
 
 ---
 
-##  Overview
+##  Description
 
 <code>L'objectif de ce projet est de présenter de manière précise et interactive le fonctionnement de la propriété CSS Anchor. À travers des Web Components et des animations, nous explorons les différentes techniques de positionnement et de comportement offerts par cette nouvelle spécialité CSS.</code>
 
 ---
 
-##  Features
+##  Fonctionnalité
 
 <code>- Démonstration interactive utilisant Query Container et Anchor</code><br>
 <code>- Exemple de différents positionnements avec la propriété Anchor</code><br>
@@ -47,7 +47,7 @@
 
 ---
 
-##  Project Structure
+## Structure du projet
 
 ```sh
 └── AnchorMotionAPI/
@@ -59,7 +59,7 @@
 ```
 
 
-###  Project Index
+###  Structure détaillé
 <details open>
 	<summary><b><code>ANCHORMOTIONAPI/</code></b></summary>
 	<details> <!-- __root__ Submodule -->
@@ -118,32 +118,30 @@
 </details>
 
 ---
-##  Getting Started
+##  Pour démarrer le site
 
-###  Prerequisites
+###  Prérequis
 
-Avant de commencer à utiliser AnchorMotionAPI, assurez-vous que votre environnement d’exécution répond aux exigences suivantes :
-
-- **Programming Language:** JavaScript
+Aucun prérequis nécessaire, ce site n'utilise pas de langage demandant une installation
 
 
 ###  Installation
 
-Installer AnchorMotionAPI :
+Installer AnchorMotionAPI sur votre machine:
 
-**Build from source:**
+**Récupérer le dossier de travail:**
 
-1. Clone the AnchorMotionAPI repository:
+1. Clone AnchorMotionAPI repository:
 ```sh
 ❯ git clone https://github.com/MuuvaY/AnchorMotionAPI.git
 ```
 
 
-###  Testing
+###  Test
 
 Pour effectuer le test de l'application, ouvrez simplement le fichier html.
 
-##  Contributing
+##  Contributeurs
 
 <p align="left">
    <a href="https://github.com{/MuuvaY/AnchorMotionAPI/}graphs/contributors">
