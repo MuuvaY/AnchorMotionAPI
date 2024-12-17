@@ -44,10 +44,10 @@
 
 ##  Features
 
-<code>- Démonstration interactive utilisant Query Container et Anchor
-- Exemple de différents positionnements avec la propriété Anchor
-- Animations illustrant les comportements de placement
-- Deux démos interactives montrant des approches distinctes de positionnement par Anchor</code>
+<code>- Démonstration interactive utilisant Query Container et Anchor</code>
+<code>- Exemple de différents positionnements avec la propriété Anchor</code>
+<code>- Animations illustrant les comportements de placement</code>
+<code>- Deux démos interactives montrant des approches distinctes de positionnement par Anchor</code>
 
 ---
 
@@ -188,10 +188,4 @@ Pour effectuer le test de l'application, ouvrez simplement le fichier html.
 
 This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
----
-
-##  Acknowledgments
-
-- MaloCaparros
-- MuuvaY
 ---
