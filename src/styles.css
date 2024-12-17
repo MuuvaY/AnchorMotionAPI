@@ -270,6 +270,12 @@ p {
   }
 }
 @media screen and (max-width: 620px) {
+  body{
+    padding: 20px 5px;
+  }
+  .demo-container{
+    padding: 1rem;
+  }
   .code-demo{
     overflow: scroll ;
     width:100%;
@@ -392,56 +398,6 @@ p {
   }
 }
 
-.container__presentation,
-.container__comprendre {
-  margin-bottom: 2rem;
-}
 
-.container__stitle,
-.container__p,
-.techniques__stitle,
-.techniques__p,
-.avantages__stitle,
-.avantages__p {
-  margin-bottom: 1rem;
-}
 
-.presentation__puce,
-.techniques__puces,
-.avantages__puces {
-  margin-left: 4rem;
 
-  li {
-    margin-bottom: 1rem;
-  }
-}
-
-.techniques__number {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.container__code {
-  font-size: 1rem;
-  background-color: lightgrey;
-  border-radius: 0.25rem;
-  padding: 0 0.3rem;
-}
-
-.container__exemple {
-  display: block;
-  background-color: #1b1b1b;
-  color: #e2e8f0;
-  padding: 1rem;
-  border-radius: 6px;
-  margin: 1rem 0;
-  line-height: 1.5;
-}
-
-pre {
-  margin: 2rem 0;
-}
-
-code {
-  border-radius: 1rem;
-}
