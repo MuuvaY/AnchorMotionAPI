@@ -19,15 +19,16 @@
 <br clear="right">
 
 ## Table du contenu
-- [ Description](#-description)
-- [ Fonctionnalités](#-fonctionnalités)
-- [ Structure du projet](#-structure-du-projet)
-  - [ Index du projet](#-index-du-projet)
-- [ Démarrer le site](#-démarrer-le-site)
-  - [ Prérequis](#-prérequis)
-  - [ Installation](#-installation)
-  - [ Test](#-test)
-- [ Contributeurs](#-contributeurs)
+- [ Description](#description)
+- [ Fonctionnalités](#fonctionnalités)
+- [ Structure du projet](#structure-du-projet)
+  - [ Index du projet](#structure-détaillé)
+- [ Démarrer le site](#démarrer-le-site)
+  - [ Prérequis](#prérequis)
+  - [ Installation](#installation)
+  - [ Test](#test)
+- [ Contributeurs](#contributeurs)
+
 
 ---
 
