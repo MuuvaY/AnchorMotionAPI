@@ -20,25 +20,25 @@
 
 ##  Table of Contents
 
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Project Structure](#-project-structure)
-  - [ Project Index](#-project-index)
-- [ Getting Started](#-getting-started)
-  - [ Prerequisites](#-prerequisites)
-  - [ Installation](#-installation)
-  - [ Testing](#-testing)
-- [ Contributing](#-contributing)
+- [ Overview](#-Description)
+- [ Features](#-Fonctionnalité)
+- [ Project Structure](#-Structure-du-projet)
+  - [ Project Index](#-Structure-détaillé)
+- [ Getting Started](#-démarrer-le-site)
+  - [ Prerequisites](#-Prerequis)
+  - [ Installation](#-Installation)
+  - [ Testing](#-Test)
+- [ Contributing](#-Contributeurs)
 
 ---
 
-##  Description
+## Description
 
 <code>L'objectif de ce projet est de présenter de manière précise et interactive le fonctionnement de la propriété CSS Anchor. À travers des Web Components et des animations, nous explorons les différentes techniques de positionnement et de comportement offerts par cette nouvelle spécialité CSS.</code>
 
 ---
 
-##  Fonctionnalité
+## Fonctionnalité
 
 <code>- Démonstration interactive utilisant Query Container et Anchor</code><br>
 <code>- Exemple de différents positionnements avec la propriété Anchor</code><br>
@@ -59,7 +59,7 @@
 ```
 
 
-###  Structure détaillé
+### Structure détaillé
 <details open>
 	<summary><b><code>ANCHORMOTIONAPI/</code></b></summary>
 	<details> <!-- __root__ Submodule -->
@@ -118,14 +118,14 @@
 </details>
 
 ---
-##  Pour démarrer le site
+## démarrer le site
 
-###  Prérequis
+### Prérequis
 
 Aucun prérequis nécessaire, ce site n'utilise pas de langage demandant une installation
 
 
-###  Installation
+### Installation
 
 Installer AnchorMotionAPI sur votre machine:
 
@@ -137,11 +137,11 @@ Installer AnchorMotionAPI sur votre machine:
 ```
 
 
-###  Test
+### Test
 
 Pour effectuer le test de l'application, ouvrez simplement le fichier html.
 
-##  Contributeurs
+### Contributeurs
 
 <p align="left">
    <a href="https://github.com{/MuuvaY/AnchorMotionAPI/}graphs/contributors">
