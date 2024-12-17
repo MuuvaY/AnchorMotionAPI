@@ -18,17 +18,16 @@
 </div>
 <br clear="right">
 
-##  Table of Contents
-
-- [ Overview](#-Description)
-- [ Features](#-Fonctionnalité)
-- [ Project Structure](#-Structure-du-projet)
-  - [ Project Index](#-Structure-détaillé)
-- [ Getting Started](#-démarrer-le-site)
-  - [ Prerequisites](#-Prerequis)
-  - [ Installation](#-Installation)
-  - [ Testing](#-Test)
-- [ Contributing](#-Contributeurs)
+## Table du contenu
+- [ Description](#-description)
+- [ Fonctionnalités](#-fonctionnalités)
+- [ Structure du projet](#-structure-du-projet)
+  - [ Index du projet](#-index-du-projet)
+- [ Démarrer le site](#-démarrer-le-site)
+  - [ Prérequis](#-prérequis)
+  - [ Installation](#-installation)
+  - [ Test](#-test)
+- [ Contributeurs](#-contributeurs)
 
 ---
 
